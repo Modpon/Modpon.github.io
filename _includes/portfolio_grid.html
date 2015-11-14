@@ -4,14 +4,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Portfolio</h2>
+                    <h2>Portfolio YOYO</h2>
                     <hr class="star-primary">
                 </div>
             </div>
             <div class="row">
-            {% for repository in site.github.public_repositories %}
-              {{ repository.name }}]({{ repository.html_url }})
-            {% endfor %}
+            <br>
+            <div>
+              {% for repository in site.github.public_repositories %}
+                <span>{{ repository.full_name }} </span>
+              {% endfor %}
+            </div>
             </div>
             <div class="row">
                 {% for post in site.posts %}
