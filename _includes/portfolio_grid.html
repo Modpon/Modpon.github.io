@@ -11,7 +11,7 @@
             <div class="row">
             <br>
             {% for repository in site.github.public_repositories %}
-              <h2><a href="modpon.github.io/{{ repository.name }}">{{ repository.name | slugify: 'pretty' }}</a></h2>
+              <h2><a href="http://modpon.github.io/{{ repository.name }}">{{ repository.name | slugify: 'pretty' }}</a></h2>
               <p>{{ repository.description }}</p>
             {% endfor %}
             </div>
