@@ -14,7 +14,7 @@
                     <a href="http://modpon.github.io/{{ repository.name }}" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
-                                {{ repository.name | slugify: 'pretty' }}
+                                {{ repository.name }}
                             </div>
                         </div>
                         <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
@@ -25,7 +25,7 @@
         <div class="row">
         {% for repository in site.github.public_repositories %}
           <p>
-            <a href="http://modpon.github.io/{{ repository.name }}">{{ repository.name | slugify: 'pretty' }}</a>
+            <a href="http://modpon.github.io/{{ repository.name }}">{{ repository.name }}</a>
             </p>
           <p>{{ repository.description }}</p>
         {% endfor %}
