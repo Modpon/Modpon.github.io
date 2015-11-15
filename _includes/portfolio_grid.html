@@ -1,6 +1,6 @@
 
-<!-- Portfolio Grid Section -->
-<section id="portfolio">
+<!-- Projects Grid Section -->
+<section id="projects">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -21,14 +21,6 @@
                     </a>
                 </div>
             {% endfor %}
-        </div>
-        <div class="row">
-        {% for repository in site.github.public_repositories %}
-          <p>
-            <a href="http://modpon.github.io/{{ repository.name }}">{{ repository.name }}</a>
-            </p>
-          <p>{{ repository.description }}</p>
-        {% endfor %}
         </div>
     </div>
 </section>
