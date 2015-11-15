@@ -1,33 +1,34 @@
 
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Portfolio YOYO</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-            <br>
-            {% for repository in site.github.public_repositories %}
-              <h2><a href="http://modpon.github.io/{{ repository.name }}">{{ repository.name | slugify: 'pretty' }}</a></h2>
-              <p>{{ repository.description }}</p>
-            {% endfor %}
-            </div>
-            <div class="row">
-                {% for post in site.posts %}
-                    <div class="col-sm-4 portfolio-item">
-                        <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                            <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
-                        </a>
-                    </div>
-                {% endfor %}
+<!-- Portfolio Grid Section -->
+<section id="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Portfolio YOYO</h2>
+                <hr class="star-primary">
             </div>
         </div>
-    </section>
+        <div class="row">
+            {% for repository in site.github.public_repositories %}
+                <div class="col-sm-4 portfolio-item">
+                    <a href="http://modpon.github.io/{{ repository.name }}" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                {{ repository.name | slugify: 'pretty' }}
+                            </div>
+                        </div>
+                        <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+        {% for repository in site.github.public_repositories %}
+          <p>
+            <a href="http://modpon.github.io/{{ repository.name }}">{{ repository.name | slugify: 'pretty' }}</a>
+            </p>
+          <p>{{ repository.description }}</p>
+        {% endfor %}
+        </div>
+    </div>
+</section>
